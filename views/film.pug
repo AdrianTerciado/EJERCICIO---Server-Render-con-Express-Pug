@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title Pelicula
+        link(rel='stylesheet', href='/style.css')
+    body 
+        header
+            nav
+                a(href='/home') Return to home
+        main
+            p Hola desde el FILM!
+            div#pintar_movie
+                p=Title
+                img(src=Poster, alt='')
+                p=Plot
+                p=Director
+                p=Actors

@@ -1,0 +1,12 @@
+doctype html
+html(lang='en')
+   head
+      meta(charset='UTF-8')
+      meta(name='viewport' content='width=device-width, initial-scale=1.0')
+      title Hello Pug
+   body
+         h1 Encuentra tu pelicula
+         h2 Post via form
+         form#form_movie(action="/film" method="post")
+            input#movie_name(type='text' name='title')
+            input(type='submit' value='Buscar')

@@ -1,0 +1,17 @@
+body{
+  
+    background: rgb(182, 161, 29);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+}
+
+
+
