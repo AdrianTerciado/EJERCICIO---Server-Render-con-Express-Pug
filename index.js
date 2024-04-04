@@ -18,6 +18,10 @@ app.get('/home', function (req, res) {
     res.render('home');
 });
 
+app.get('/', function (req, res) {
+    res.render('home');
+});
+
 app.use('/film', filmRoute);
 
 

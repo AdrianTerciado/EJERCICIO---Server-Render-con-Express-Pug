@@ -6,9 +6,14 @@ const getFilm = async (req, res) => {
         const title = req.params.title;
         console.log(title);
         let film = await fetchFilm.getFilm(title); 
+        if (film.Response == "True"){
         console.log(film);
         res.status(200).render('film.pug',film
         );
+        }
+        else{
+            res.redirect("/home")
+        }
     }
     catch (error) {
         console.log(`ERROR: ${error.stack}`);
@@ -20,9 +25,15 @@ const getFilm = async (req, res) => {
 const postFilm = async (req, res) => {
    
     try {
+       
         const title = req.body.title;
-        
-        res.redirect("/film/" + title);
+        console.log(title);
+        if(title){
+           res.redirect("/film/" + title); 
+        }
+        else{
+            res.status(404).redirect("/home")
+        }
     }
     catch (error) {
         console.log(`ERROR: ${error.stack}`);

@@ -7,3 +7,5 @@ const getFilm = async (title) => {
 module.exports = {
     getFilm
 }
+/* getFilm("-")
+    .then(data => console.log(data)); */
